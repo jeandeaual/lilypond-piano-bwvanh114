@@ -12,6 +12,7 @@
     "music"
     "partition"
     "piano"
+    "harpsichord"
     "minuet"
   ) ", ")
   tagline = ##f
@@ -113,18 +114,20 @@ left = \relative c' {
   }
 }
 
-pianoStaff = <<
+pianoStaff = \new PianoStaff \with {
+  midiInstrument = "harpsichord"
+} <<
     \new Staff = "right" { \right }
     \new Staff = "left" { \left }
 >>
 
 \score {
-  \new PianoStaff \pianoStaff
+  \pianoStaff
   \layout {}
 }
 
 \score {
-  \new PianoStaff \unfoldRepeats \pianoStaff
+  \unfoldRepeats \pianoStaff
   \midi {
     \tempo 4 = 140
   }
