@@ -2,16 +2,16 @@
 # See https://mikefarah.gitbook.io/yq/commands/write-update#using-a-script-file-to-update
 - command: update
   path: title
-  value: “Minuet in G major” (BWV Anh. 114) by Christian Petzold
+  value: “Minuet in G Major” (BWV Anh. 114) and “Minuet in G Minor” (BWV Anh. 115) by Christian Petzold
 # Use the short description from the GitHub project
 - command: delete
   path: description
 - command: update
   path: baseurl
-  value: /lilypond-piano-bwvanh114
+  value: /lilypond-piano-bwvanh114-115
 - command: update
   path: url
   value: https://jeandeaual.github.io
 - command: update
   path: repository
-  value: jeandeaual/lilypond-piano-bwvanh114
+  value: jeandeaual/lilypond-piano-bwvanh114-115

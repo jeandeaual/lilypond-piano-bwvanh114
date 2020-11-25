@@ -28,18 +28,30 @@ jobs:
         uses: docker://jeandeaual/lilypond:2.20.0
         with:
           args: lilypond bwvanh114.ly
-      - name: Build A4 PDF
+      - name: Build A4 PDF (BWV Anh. 114)
         uses: docker://jeandeaual/lilypond:latest
         with:
           args: lilypond -dno-point-and-click -dembed-source-code -dmidi-extension="midi" -dpaper-size=\"a4\" -o build/a4 bwvanh114.ly
-      - name: Build Letter PDF
+      - name: Build Letter PDF (BWV Anh. 114)
         uses: docker://jeandeaual/lilypond:latest
         with:
           args: lilypond -dno-point-and-click -dembed-source-code -dmidi-extension="midi" -dpaper-size=\"letter\" -o build/letter bwvanh114.ly
-      - name: Build SVG
+      - name: Build SVG (BWV Anh. 114)
         uses: docker://jeandeaual/lilypond:latest
         with:
           args: lilypond --svg -dno-point-and-click -dmidi-extension="midi" -dpaper-size=\"a4\" -o build/svg bwvanh114.ly
+      - name: Build A4 PDF (BWV Anh. 115)
+        uses: docker://jeandeaual/lilypond:latest
+        with:
+          args: lilypond -dno-point-and-click -dembed-source-code -dmidi-extension="midi" -dpaper-size=\"a4\" -o build/a4 bwvanh115.ly
+      - name: Build Letter PDF (BWV Anh. 115)
+        uses: docker://jeandeaual/lilypond:latest
+        with:
+          args: lilypond -dno-point-and-click -dembed-source-code -dmidi-extension="midi" -dpaper-size=\"letter\" -o build/letter bwvanh115.ly
+      - name: Build SVG (BWV Anh. 115)
+        uses: docker://jeandeaual/lilypond:latest
+        with:
+          args: lilypond --svg -dno-point-and-click -dmidi-extension="midi" -dpaper-size=\"a4\" -o build/svg bwvanh115.ly
       - name: Remove extra MIDI files
         run: |
           cp build/a4/*.midi build/midi/
