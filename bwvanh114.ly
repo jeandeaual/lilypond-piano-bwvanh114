@@ -129,13 +129,23 @@ left = \relative c' {
     g b, d |
     g d g, |
   }
+
+  % Display two opposite \fermata signs over the last bar line
+  % http://lsr.di.unimi.it/LSR/Item?id=10
+  \override Score.RehearsalMark.break-visibility = #begin-of-line-invisible
+  \mark \markup \musicglyph #"scripts.ufermata"
+
+  % The RehearsalMark in Staff is overriden, while not touching the one
+  % from Score.
+  \override Staff.RehearsalMark.direction = #DOWN
+  \override Staff.RehearsalMark.rotation = #'(180 0 0)
 }
 
 pianoStaff = \new PianoStaff \with {
   midiInstrument = "harpsichord"
 } <<
     \new Staff = "right" { \right }
-    \new Staff = "left" { \left }
+    \new Staff = "left" \with { \consists "Mark_engraver" } { \left }
 >>
 
 \score {
