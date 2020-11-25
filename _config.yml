@@ -1,7 +1,7 @@
-title: “Minuet in G major” (BWV Anh. 114) by Christian Petzold
-baseurl: /lilypond-piano-bwvanh114
+title: “Minuet in G Major” (BWV Anh. 114) and “Minuet in G Minor” (BWV Anh. 115) by Christian Petzold
+baseurl: /lilypond-piano-bwvanh114-115
 url: https://jeandeaual.github.io
-repository: jeandeaual/lilypond-piano-bwvanh114
+repository: jeandeaual/lilypond-piano-bwvanh114-115
 lang: en-US
 show_downloads: false
 # Build settings
